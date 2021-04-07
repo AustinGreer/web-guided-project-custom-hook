@@ -12,15 +12,12 @@ const getPokemen = () => {
 }
 
 
-
-import SelectedPokemon from './components/SelectedPokemon';
-
 function App() {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
   useEffect(() => {
-    setPokemen(getPokeMen());
+    setPokemen(getPokemen());
   }, []);
 
   const handlePoke = (id) => {
