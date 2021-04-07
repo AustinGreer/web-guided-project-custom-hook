@@ -25,6 +25,8 @@ const useForm = (initialValues) => {
   const [values, setValue] = useState(initialValues);
 
   const handleChanges = e => {
+    console.log(e.target.name);
+    
     setValue({
       lastName: e.target.value
     });
