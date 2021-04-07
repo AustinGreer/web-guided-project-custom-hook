@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const useForm = (initialValue) => {
-  const [value, setValue] = useState(initialValue);
+const useForm = (initialValues) => {
+  const [values, setValue] = useState(initialValues);
 
   const handleChanges = e => {
     setValue(e.target.value);
@@ -30,16 +30,20 @@ const useForm = (initialValue) => {
 
   const clearForm = e => {
     e.preventDefault();
-    setValue(initialValue);
+    setValue(initialValues);
   };
 
-  return([ value, handleChanges, clearForm ]);
+  return([ values, handleChanges, clearForm ]);
+}
+
+const initialValues = {
+  firstName:"", 
+  lastName:""
 }
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [ firstName, handleChanges, clearForm ] = useForm("Chris");
-  
+  const [ firstName, handleChanges, clearForm ] = useForm(initialValues);
   
   const handleSubmit = e => {
     e.preventDefault();
