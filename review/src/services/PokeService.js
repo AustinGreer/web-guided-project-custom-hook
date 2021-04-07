@@ -1,5 +1,5 @@
 import axios from 'axios';
-import data from "./../data";
+import data from "./../../data";
 
 export const getPokemen = () => {
     return(data);
