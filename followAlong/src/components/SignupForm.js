@@ -53,12 +53,12 @@ const useLocalStorage = (key, initialValue) => {
     setValue(value);
   }
 
-  return [value, setValue];
+  return [value, setLocalStorageValue];
 }
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [ name, setName] = useLocalStorage("name", "Warren");
+  const [ name, setName ] = useLocalStorage("name", "Warren");
 
   const [ values, handleChanges, clearForm ] = useForm(initialValues);
   
@@ -71,7 +71,7 @@ export default function SignupForm() {
     <div p={2} className="form">
       <p>{name}</p>
       <button onClick={()=>{
-        setName("Allison");
+        setName("Chris");
       }}>Click me</button>
       <hr/>
 
