@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <div id="selectedDiv">
         <h2>Selected Pokemon: {selectedPokemon.name || "none"}</h2>
         {selectedPokemon.name && (
@@ -41,6 +42,7 @@ function App() {
           </div>
         )}
       </div>
+
       <div id="pokeList">
         {pokemen.map((pokemon) => (
           <div
