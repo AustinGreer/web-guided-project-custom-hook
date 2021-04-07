@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getSelectedPokemon, getPokemen } from './../services/PokeService';
 
 const usePokeState = (initPokemen, initSelectedPokemon) => {
     const [pokemen, setPokemen] = useState(initPokemen);
