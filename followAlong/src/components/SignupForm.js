@@ -40,6 +40,9 @@ const useLocalStorage = (key, initialValue) => {
   // const [ value, setValue ] = useState(initialValue);
 
   const [ value, setValue ] = useState(()=> {
+    if (window.localStorage.getItem(key)) {
+      return JSON.parse(window.localStorage.getItem(key));
+    }
     return initialValue;
   });
 
