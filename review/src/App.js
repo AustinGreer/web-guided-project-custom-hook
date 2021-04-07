@@ -17,7 +17,6 @@ const usePokeState = () => {
   const handlePoke = (id) => {
     getSelectedPokemon(id)
       .then((data)=> {
-        console.log(data);
         setSelectedPokemon(data);
       })
       .catch(err=> {
