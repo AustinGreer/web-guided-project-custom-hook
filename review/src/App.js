@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <div id="selectedDiv">
         <h2>Selected Pokemon: {selectedPokemon.name || "none"}</h2>
         {selectedPokemon.name && (
@@ -45,6 +45,7 @@ function App() {
 
       <div id="pokeList">
         {pokemen.map((pokemon) => (
+          
           <div
             onClick={() => handlePoke(pokemon.id)}
             key={pokemon.id}
