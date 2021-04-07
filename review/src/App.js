@@ -24,10 +24,13 @@ const usePokeState = () => {
         console.log(err);
       })
   };
+
+  return([]);
 }
 
 function App() {
-  
+  const [selectedPokemon, handlePoke, pokemen] = usePokeState();
+
   return (
     <div className="App">
       <SelectedPoke selectedPokemon={selectedPokemon} />
