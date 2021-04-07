@@ -38,15 +38,13 @@ const useForm = (initialValue) => {
 
 export default function SignupForm() {
   const classes = useStyles();
-  
+  const [ firstName, handleChanges, clearForm ] = useForm("Warren");
 
   
   const handleSubmit = e => {
     e.preventDefault();
     alert(firstName);
   };
-
-
 
   return (
     <div p={2} className="form">
