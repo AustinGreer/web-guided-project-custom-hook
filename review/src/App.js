@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
 
-      <SelectedPokemon />
+      <SelectedPokemon selectedPokemon={selectedPokemon}/>
 
       <div id="pokeList">
         {pokemen.map((pokemon) => (
