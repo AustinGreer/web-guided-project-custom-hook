@@ -38,7 +38,7 @@ const useForm = (initialValues) => {
 
 const initialValues = {
   firstName:"Warren", 
-  lastName:"Chirs"
+  lastName:"Chris"
 }
 
 export default function SignupForm() {
@@ -50,6 +50,8 @@ export default function SignupForm() {
     alert(values.firstName);
   };
 
+  console.log(values);
+  
   return (
     <div p={2} className="form">
       <form onSubmit={handleSubmit}>
@@ -72,17 +74,6 @@ export default function SignupForm() {
             className={classes.textField}
             name="lastName"
             value={values.lastName}
-            onChange={handleChanges}
-            margin="normal"
-            variant="outlined"
-          />
-
-          <TextField
-            id="outlined-name"
-            label="Email"
-            className={classes.textField}
-            name="email"
-            value={values.email}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
