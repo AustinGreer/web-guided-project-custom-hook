@@ -30,7 +30,7 @@ const useForm = (initialValue) => {
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName("");
+    setFirstName(initialValue);
   };
 
   return([ firstName, handleChanges, clearForm ]);
@@ -38,7 +38,7 @@ const useForm = (initialValue) => {
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [ firstName, handleChanges, clearForm ] = useForm("Warren");
+  const [ firstName, handleChanges, clearForm ] = useForm("Chris");
 
   
   const handleSubmit = e => {
