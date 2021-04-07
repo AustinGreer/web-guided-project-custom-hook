@@ -49,7 +49,7 @@ export default function SignupForm() {
   
   const handleSubmit = e => {
     e.preventDefault();
-    alert(values.firstName);
+    alert(`${values.firstName} ${values.lastName}`);
   };
 
   console.log(values);
