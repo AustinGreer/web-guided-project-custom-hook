@@ -22,15 +22,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const useForm = (initialValue) => {
-  const [firstName, setFirstName] = useState(initialValue);
+  const [value, setValue] = useState(initialValue);
 
   const handleChanges = e => {
-    setFirstName(e.target.value);
+    setValue(e.target.value);
   };
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName(initialValue);
+    setValue(initialValue);
   };
 
   return([ firstName, handleChanges, clearForm ]);
