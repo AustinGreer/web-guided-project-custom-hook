@@ -25,9 +25,9 @@ const useStyles = makeStyles(theme => ({
 
 
 const initialValues = {
-  firstName:localStorage.getItem("name"), 
+  firstName:"", 
   lastName:"",
-  email: localStorage.getItem("key")
+  email: ""
 }
 
 export default function SignupForm() {
