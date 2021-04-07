@@ -48,11 +48,13 @@ const useLocalStorage = (key, initialValue) => {
     return initialValue;
   });
 
-  return [];
+  return [value, setValue];
 }
 
 export default function SignupForm() {
   const classes = useStyles();
+  const [ name, setName] = useState("Warren");
+
   const [ values, handleChanges, clearForm ] = useForm(initialValues);
   
   const handleSubmit = e => {
@@ -62,6 +64,8 @@ export default function SignupForm() {
 
   return (
     <div p={2} className="form">
+      <p>{name}</p>
+
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>
