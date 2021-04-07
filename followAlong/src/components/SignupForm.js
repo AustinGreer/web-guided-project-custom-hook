@@ -51,7 +51,7 @@ export default function SignupForm() {
   
   const handleSubmit = e => {
     e.preventDefault();
-    alert(`${values.firstName} ${values.lastName}`);
+    alert(`${values.firstName} ${values.lastName} ${values.email}`);
   };
 
   return (
@@ -83,7 +83,7 @@ export default function SignupForm() {
 
           <TextField
             id="outlined-name"
-            label="email"
+            label="Email"
             className={classes.textField}
             name="email"
             value={values.email}
