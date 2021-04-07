@@ -22,8 +22,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
-
 const initialValues = {
   firstName:"", 
   lastName:"",
@@ -32,7 +30,7 @@ const initialValues = {
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [ name, setName ] = useLocalStorage("name", "Warren");
+  // const [ name, setName ] = useLocalStorage("name", "Warren");
 
   const [ values, handleChanges, clearForm ] = useForm(initialValues);
   
@@ -43,11 +41,11 @@ export default function SignupForm() {
 
   return (
     <div p={2} className="form">
-      <p>{name}</p>
+      {/* <p>{name}</p>
       <button onClick={()=>{
         setName("Chris");
       }}>Click me</button>
-      <hr/>
+      <hr/> */}
 
       <form onSubmit={handleSubmit}>
         <fieldset>
