@@ -8,7 +8,7 @@ function PokeList(props) {
   return (
     <div id="pokeList">
       {pokemen.map((pokemon) => (
-        <Pokemon pokemon={pokemon} handlePoke={handlePoke}/>
+        <Pokemon key={pokemon.id} pokemon={pokemon} handlePoke={handlePoke}/>
       ))}
     </div>
   );
