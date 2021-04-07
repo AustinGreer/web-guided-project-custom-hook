@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 const SelectedPokemon = () => {
     return(<div id="selectedDiv">
@@ -24,4 +24,4 @@ const SelectedPokemon = () => {
     </div>);
 }
 
-export default SelectPokemon;
+export default SelectedPokemon;
