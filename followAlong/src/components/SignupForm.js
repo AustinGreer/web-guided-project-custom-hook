@@ -35,7 +35,7 @@ const useLocalStorage = (key, initialValue) => {
   //  When we create state, check to see if that value is in localStorage
   //  If it does, put that into our state value
   //  If it does not, put our initialValue into state AND localStorage
-  //  When we update out state, save that update to localStorage
+  //  When we update our state, save that update to localStorage
 
   // const [ value, setValue ] = useState(initialValue);
 
