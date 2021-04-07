@@ -37,8 +37,8 @@ const useForm = (initialValues) => {
 }
 
 const initialValues = {
-  firstName:"", 
-  lastName:""
+  firstName:"Warren", 
+  lastName:"Chirs"
 }
 
 export default function SignupForm() {
@@ -72,6 +72,17 @@ export default function SignupForm() {
             className={classes.textField}
             name="lastName"
             value={values.lastName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+
+          <TextField
+            id="outlined-name"
+            label="Email"
+            className={classes.textField}
+            name="email"
+            value={values.email}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
