@@ -4,7 +4,7 @@ import "./styles.scss";
 import PokeList from './components/PokeList';
 import SelectedPoke from './components/SelectedPoke';
 
-import { getPokemen, getSelectedPokemon} from './services/PokeService';
+import usePokeState from './hooks/usePokeState';
 
 function App() {
   const [selectedPokemon, handlePoke, pokemen] = usePokeState([], {});
