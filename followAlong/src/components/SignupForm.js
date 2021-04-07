@@ -33,7 +33,7 @@ const useForm = (initialValue) => {
     setValue(initialValue);
   };
 
-  return([ firstName, handleChanges, clearForm ]);
+  return([ value, handleChanges, clearForm ]);
 }
 
 export default function SignupForm() {
