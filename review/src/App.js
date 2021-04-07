@@ -28,6 +28,14 @@ function App() {
       .then((res) => {
         setSelectedPokemon(res.data);
       });
+    
+    setSelectedPokemon()
+      .then((data)=> {
+        setSelectedPokemon(data);
+      })
+      .catch(err=> {
+        console.log(err);
+      })
   };
 
   return (
