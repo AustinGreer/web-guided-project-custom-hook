@@ -7,6 +7,8 @@ import data from "./../data";
 
 import axios from 'axios';
 
+
+
 function App() {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
