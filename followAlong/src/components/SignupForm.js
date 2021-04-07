@@ -31,8 +31,9 @@ const initialValues = {
 }
 
 
-const useLocalStorage = () => {
-  //When we create state, check to see if that value is in localStorage
+const useLocalStorage = (key, initialValue) => {
+  //  When we create state, check to see if that value is in localStorage
+  //  If it does, put that into our state value
   
   const [ value, setValue ] = useState(initialValue);
 
