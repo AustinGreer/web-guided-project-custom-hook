@@ -26,6 +26,7 @@ const useForm = (initialValues) => {
 
   const handleChanges = e => {
     setValue({
+      ...values,
       [e.target.name]: e.target.value
     });
   };
