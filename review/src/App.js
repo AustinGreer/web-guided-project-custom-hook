@@ -11,6 +11,9 @@ const getPokemen = () => {
   return(data);
 }
 
+const getSelectedPokemon = () => {
+
+}
 
 function App() {
   const [pokemen, setPokemen] = useState([]);
