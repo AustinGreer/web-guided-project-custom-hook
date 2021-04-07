@@ -43,6 +43,8 @@ const useLocalStorage = (key, initialValue) => {
     if (window.localStorage.getItem(key)) {
       return JSON.parse(window.localStorage.getItem(key));
     }
+
+    window.localStorage.setItem(key, initialValue);
     return initialValue;
   });
 
