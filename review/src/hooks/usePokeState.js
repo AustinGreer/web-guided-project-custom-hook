@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 const usePokeState = (initPokemen, initSelectedPokemon) => {
     const [pokemen, setPokemen] = useState(initPokemen);
     const [selectedPokemon, setSelectedPokemon] = useState(initSelectedPokemon);
@@ -18,3 +20,5 @@ const usePokeState = (initPokemen, initSelectedPokemon) => {
   
     return([selectedPokemon, handlePoke, pokemen]);
 }
+
+export default usePokeState;
