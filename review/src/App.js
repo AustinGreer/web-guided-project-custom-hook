@@ -11,10 +11,9 @@ const getPokemen = () => {
   return(data);
 }
 
-const getSelectedPokemon = () => {
+const getSelectedPokemon = (id) => {
   return axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => {
-      console.log(res);
       return res.data;
     });
 }
@@ -28,9 +27,10 @@ function App() {
   }, []);
 
   const handlePoke = (id) => {
-    getSelectedPokemon()
+    getSelectedPokemon(id)
       .then((data)=> {
-        getSelectedPokemon(data);
+        console.log(data);
+        setSelectedPokemon(data);
       })
       .catch(err=> {
         console.log(err);
