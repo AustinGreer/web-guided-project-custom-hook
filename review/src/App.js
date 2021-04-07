@@ -6,27 +6,6 @@ import SelectedPoke from './components/SelectedPoke';
 
 import { getPokemen, getSelectedPokemon} from './services/PokeService';
 
-const usePokeState = (initPokemen, initSelectedPokemon) => {
-  const [pokemen, setPokemen] = useState(initPokemen);
-  const [selectedPokemon, setSelectedPokemon] = useState(initSelectedPokemon);
-
-  useEffect(() => {
-    setPokemen(getPokemen());
-  }, []);
-
-  const handlePoke = (id) => {
-    getSelectedPokemon(id)
-      .then((data)=> {
-        setSelectedPokemon(data);
-      })
-      .catch(err=> {
-        console.log(err);
-      })
-  };
-
-  return([selectedPokemon, handlePoke, pokemen]);
-}
-
 function App() {
   const [selectedPokemon, handlePoke, pokemen] = usePokeState([], {});
 
