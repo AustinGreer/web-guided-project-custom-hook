@@ -61,6 +61,18 @@ export default function SignupForm() {
             margin="normal"
             variant="outlined"
           />
+
+          <TextField
+            id="outlined-name"
+            label="Last Name"
+            className={classes.textField}
+            name="lastName"
+            value={lastName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          
           <div className="flexer">
             <Button color="red" onClick={clearForm}>
               Clear
