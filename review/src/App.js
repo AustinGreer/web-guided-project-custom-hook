@@ -7,6 +7,10 @@ import data from "./../data";
 
 import axios from 'axios';
 
+const getPokemen = () => {
+  return(data);
+}
+
 
 
 function App() {
@@ -14,7 +18,7 @@ function App() {
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
   useEffect(() => {
-    setPokemen(data);
+    setPokemen(getPokeMen());
   }, []);
 
   const handlePoke = (id) => {
