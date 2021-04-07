@@ -25,7 +25,9 @@ const useForm = (initialValues) => {
   const [values, setValue] = useState(initialValues);
 
   const handleChanges = e => {
-    setValue(e.target.value);
+    setValue({
+      firstName: e.target.value
+    });
   };
 
   const clearForm = e => {
@@ -51,7 +53,7 @@ export default function SignupForm() {
   };
 
   console.log(values);
-  
+
   return (
     <div p={2} className="form">
       <form onSubmit={handleSubmit}>
