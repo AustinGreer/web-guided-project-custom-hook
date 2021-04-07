@@ -39,7 +39,7 @@ const useForm = (initialValue) => {
 export default function SignupForm() {
   const classes = useStyles();
   const [ firstName, handleChanges, clearForm ] = useForm("Chris");
-
+  
   
   const handleSubmit = e => {
     e.preventDefault();
@@ -72,7 +72,7 @@ export default function SignupForm() {
             margin="normal"
             variant="outlined"
           />
-          
+
           <div className="flexer">
             <Button color="red" onClick={clearForm}>
               Clear
