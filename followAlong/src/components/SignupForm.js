@@ -65,6 +65,10 @@ export default function SignupForm() {
   return (
     <div p={2} className="form">
       <p>{name}</p>
+      <button onClick={()=>{
+        setName("Allison");
+      }}>Click me</button>
+      <hr/>
 
       <form onSubmit={handleSubmit}>
         <fieldset>
