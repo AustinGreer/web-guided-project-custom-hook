@@ -30,6 +30,15 @@ const initialValues = {
   email: ""
 }
 
+
+const useLocalStorage = () => {
+  //When we create state, check to see if that value is in localStorage
+  
+  const [ value, setValue ] = useState(initialValue);
+
+  return [];
+}
+
 export default function SignupForm() {
   const classes = useStyles();
   const [ values, handleChanges, clearForm ] = useForm(initialValues);
