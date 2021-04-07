@@ -53,7 +53,7 @@ const useLocalStorage = (key, initialValue) => {
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [ name, setName] = useState("Warren");
+  const [ name, setName] = useLocalStorage("name", "Warren");
 
   const [ values, handleChanges, clearForm ] = useForm(initialValues);
   
